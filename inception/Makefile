@@ -10,6 +10,7 @@ SECRETS_DIR = secrets
 # vérifie d'abord que le dossier secrets existe,
 # puis construit et démarre les conteneurs
 all: check-secrets
+	sudo mkdir -p /home/hsamira/data/mariadb /home/hsamira/data/wordpress
 	$(COMPOSE) up -d --build
 
 # Vérifie que le dossier secrets existe
